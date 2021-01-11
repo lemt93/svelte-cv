@@ -1,0 +1,20 @@
+---
+<div class="profile flex flex-wrap justify-center">
+  <div class="profile__picture flex-full items-center w-3/5 print:w-1/5 sm:w-1/5 mb-6">
+    <ResponsiveImage src="assets/profile.jpg"
+                     href="https://github.com/lemt93" />
+  </div>
+  
+  <div class="profile_details px-4 flex-initial w-full print:w-4/5 sm:w-4/5">
+    <Contact />
+    <Blockquote />
+  </div>
+</div>
+
+
+
+<script>
+  import Contact from './Contact.svx'
+  import Blockquote from './Blockquote.svx'
+  import ResponsiveImage from './ResponsiveImage.svelte'
+</script>

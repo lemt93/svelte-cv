@@ -1,0 +1,54 @@
+<style lang="scss">
+  li {
+    @apply list-none
+  }
+</style>
+
+<ul>
+  {#each findMeItems as item}
+    <li class="flex">
+      <div class="flex-initial w-20">{item.name}</div>
+      <div class="flex-auto">
+        {#if (item.href)}
+          <a href={item.href} target="_blank">{item.label}</a>
+        {:else}
+          <span>{item.label}</span>
+        {/if}
+      </div>
+    </li>
+  {/each}
+</ul>
+
+<script>
+  let findMeItems = [
+    {
+      key: 'github',
+      href: 'https://github.com/lemt93',
+      label: '/lemt93',
+      name: 'GitHub'
+    },
+    {
+      key: 'linkedin',
+      href: 'https://www.linkedin.com/in/tammle93/',
+      label: '/in/tammle93',
+      name: 'LinkedIn'
+    },
+    {
+      key: 'gmail',
+      href: 'mailto:lemt93@gmail.com',
+      label: 'lemt93@gmail.com',
+      name: 'Email'
+    },
+    {
+      key: 'skype',
+      href: 'skype:live:lemt93_1?chat',
+      label: 'lemt93@gmail.com',
+      name: 'Skype'
+    },
+    {
+      key: 'phone',
+      label: '034 2311 559',
+      name: 'Phone'
+    }
+  ]
+</script>

@@ -1,0 +1,125 @@
+<style global lang="scss">
+  .markdown-body {
+    h1 {
+      @apply text-3xl font-semibold
+             py-0.5
+             my-2
+             border-b border-gray-200
+    }
+    
+    h3 {
+      @apply text-xl font-semibold
+    }
+    
+    h4 {
+      &:not(:first-of-type) {
+        @apply mt-6 
+      }
+      
+      @apply text-base font-semibold
+    }
+    
+    ul, ol {
+      @apply pl-8
+    }
+    
+    li {
+      @apply list-disc
+    }
+    
+    table {
+      th, td {
+        @apply border border-gray-300
+               px-3 py-1.5
+      }
+      
+      @apply border-collapse border border-gray-300
+    }
+    
+    blockquote {
+      margin-left: calc(1rem - 4px);
+      
+      @apply text-gray-600
+             px-4
+             my-4
+             border-l-4 border-gray-200
+    }
+    
+    hr {
+      @apply my-6
+             border-t-2
+    }
+    
+    a {
+      @apply text-blue-500
+    }
+    
+    @apply leading-7
+  }
+</style>
+
+<button on:click={_ => window.print()} class="text-blue-500 absolute right-0 print:hidden">
+  Print/Download as PDF
+</button>
+<div class="markdown-body">
+
+<Summary />
+  
+<Profile />
+
+# Relevant Work Experience
+### GoBear VN
+(*July 2020 - Now*) --- **Senior/Lead FE Engineer**
+- Building insurance purchase flow, focusing on providing user best experience for customizing their plan
+- Analyzing requirements from product team, discussing and proposing ideas for a better design
+- Resolving task dependency with BE team, oversight my teammates and maintaining code quality
+- Refactoring codebase to unify 2 branches of 2 products into one. The purpose is to provide flexibility, convenient ways configuring products and ease of deployment.
+
+---
+### KMS Technology
+#### Ceterus
+(*May 2020 - June 2020*) --- **Senior/TechLead FE Engineer**
+- Working mostly with HighchartJS to visualize figures from financial data
+- Refactoring react-router, route component to be reusable and ease of development in the long run
+
+#### Elsevier
+(*Mar 2020 - May 2020*) --- **Senior FE Engineer**
+- Making AngularJS shared components updated with the newest style guide.
+- Documenting how to use these components and its APIs.
+
+#### EditShare
+(*June 2019 - Mar 2020*) --- **BE/System Engineer**
+- Implementing REST APIs providing interaction with ACLs of Linux system using Python/Twisted
+- Writing unit tests for APIs using Pytests
+- Using Ansible to transform a VM node into an apt-mirror server for the internal team. This resulted in much easier and quicker when updating from these servers instead of the public node (with only 100Mbps line).
+- Using Vagrant/libvirt to provide virtualization, team now can create an Vagrant node (for testing) with just a few command lines (Python script)
+- Giving demos/presentations to client at the end of Sprint.
+- Troubleshooting VMs and network errors, working closely with KMS IT
+team to provide smooth infrastructure for the internal team.
+
+#### Digital Picture - Revegy
+(*Oct 2018 - May 2019*) --- **Senior/TechLead FE Engineer/Acting Scrum Master**
+- Analyzing new requirements to prepare a new proposal, and the result is that we won a new contract with DP.
+- Implementing base structure: define base services, models and how should components interact with each other.
+- Integrated JointJS model into Ember model, resulted in better data synchronization and render/update performance for SVG elements.
+- Working mostly with the data layer in Ember: collaborate with BE developers to define APIs, define models and relationships between them.
+- Analyzing risks in grooming/planning, provide solutions for technical challenged tasks.
+- Identifying and resolve blocker issues, ensure the team follows the defined process right.
+
+#### Core - Revegy
+(*July 2016 – Oct 2018*) --- **FE Engineer**
+- Working independently and effectively with assigned tasks, clarify requirements with QA and BA if needed.
+- Using Ember and JointJS to implement intensive interaction feature, such as: draw org chart and allow user to interact with it (drag/drop/update attributes)
+
+#### Internal tools of KMS
+(*May 2016 – July 2016*) --- **FE Engineer**
+- Improve React/HighchartJS render performance
+
+#### Launch program of KMS
+(*March 2016 - May 2016*) --- **Intern/Trainee**
+</div>
+
+<script>
+  import Profile from '../components/Profile.svx'
+  import Summary from '../components/Summary.svx'
+</script>

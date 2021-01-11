@@ -1,22 +1,22 @@
-<svelte:head>
-  <title>Tam Minh Le - Passionate Engineering</title>
-</svelte:head>
-
-<main class="text-red-400">
-  This is {fullName} CV
-</main>
-
-<style global>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-</style>
+<div class="flex flex-wrap w-full justify-center items-center">
+  <div class="p-2 md:w-3/4 relative">
+    <CV />
+  </div>
+  
+  <footer class="flex-grow text-center w-full p-4 mt-4">
+    Tam Minh Le CV - Built with 
+    <a href="https://svelte.dev/" target="_blank" class="text-yellow-500">
+      Svelte
+    </a>
+    and
+    <a href="https://mdsvex.com/" target="_blank" class="text-yellow-500">
+      mdsvex
+    </a>
+  </footer>
+</div>
 
 <script>
-  let firstName = 'Tam'
-  let middleName = 'Minh'
-  let lastName = 'Le'
-
-  $: fullName = `${firstName} ${middleName} ${lastName}`
+  import './TailwindCSS.svelte'
+  import CV from './components/cv.svx'
 </script>
 

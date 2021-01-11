@@ -103,3 +103,7 @@ Then, from within your project folder:
 npm run build
 surge public my-project.surge.sh
 ```
+
+## TODO
+1. Should output CSS uncompressed in DEV mode
+2. TBD...

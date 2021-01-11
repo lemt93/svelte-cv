@@ -1,0 +1,7 @@
+### Tam Minh Le
+- 4+ years of experience of working as front-end engineer with strong fundamentals of JS core
+- About half of year of working with Python, Linux system, networking and virtualization technologies
+- Familiar and experienced working with FE libraries/frameworks (Nuxt/Vue, React, Ember)
+- Familiar with FE dev tools, such as: webpack/babel, CSS preprocessors (Sass/PostCSS)
+- Good English communication, both written and verbal
+- Having strong urge to learn, to build applications with JS/NodeJS 

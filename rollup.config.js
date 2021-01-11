@@ -5,6 +5,7 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
 import sveltePreprocess from 'svelte-preprocess'
+import { mdsvex } from 'mdsvex'
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -32,7 +33,7 @@ function serve() {
 export default {
 	input: 'src/main.js',
 	output: {
-		sourcemap: true,
+		sourcemap: !production,
 		format: 'iife',
 		name: 'app',
 		file: 'public/build/bundle.js'
@@ -43,13 +44,20 @@ export default {
 				// enable run-time checks when not in production
 				dev: !production
 			},
-			preprocess: sveltePreprocess({
-				sourceMap: !production,
-				defaults: {
-					style: 'scss'
-				},
-				postcss: true
-			})
+			extensions: ['.svelte', '.svx'],
+			preprocess: [
+				sveltePreprocess({
+					sourceMap: !production,
+					defaults: {
+						style: 'scss'
+					},
+					scss: {
+						renderSync: true
+					},
+					postcss: true
+				}),
+				mdsvex()
+			]
 		}),
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
