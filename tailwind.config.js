@@ -3,6 +3,7 @@ module.exports = {
       './public/index.html',
       './src/**/*.svelte',
       './src/**/*.svx',
+      './ssg/index.html'
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {

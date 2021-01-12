@@ -3,7 +3,7 @@
     <CV />
   </div>
   
-  <footer class="flex-grow text-center w-full p-4 mt-4">
+  <footer class="print:hidden flex-grow text-center w-full p-4 mt-4">
     Tam Minh Le CV - Built with 
     <a href="https://svelte.dev/" target="_blank" class="text-yellow-500">
       Svelte
