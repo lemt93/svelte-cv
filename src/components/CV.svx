@@ -58,14 +58,10 @@
   }
 </style>
 
-<button on:click={_ => window.print()} class="text-blue-500 absolute right-0 print:hidden">
-  Print/Download as PDF
-</button>
+<PrintBtn />
 <div class="markdown-body">
-
-<Summary />
-  
-<Profile />
+  <Summary />
+  <Profile />
 
 # Relevant Work Experience
 ### GoBear VN
@@ -120,6 +116,7 @@ team to provide smooth infrastructure for the internal team.
 </div>
 
 <script>
-  import Profile from '../components/Profile.svx'
-  import Summary from '../components/Summary.svx'
+  import PrintBtn from './PrintBtn.svelte'
+  import Profile from './Profile.svx'
+  import Summary from './Summary.svx'
 </script>
